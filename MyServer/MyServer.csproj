@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>99cc8ed8-9f80-4469-babb-e3b0ed810696</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="tweets.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="tweets.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.SignalR.Core" Version="2.4.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyEntity\MyEntity.csproj" />
+  </ItemGroup>
+
+
+
+</Project>
